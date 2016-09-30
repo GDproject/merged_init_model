@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-  has_many :bets, dependent: :destroy
-  has_many :news, dependent: :destroy
+  has_many :bets
+  has_many :news
 end

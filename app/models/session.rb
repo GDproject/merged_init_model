@@ -1,3 +1,3 @@
 class Session < ApplicationRecord
-  has_many :ranks, dependent: :destroy
+  has_many :ranks
 end
