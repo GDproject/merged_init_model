@@ -28,3 +28,9 @@ en:
   about: "ABOUT"
   index:
     title: "This is the title of index page"
+
+  login: "LOGIN"
+  logout: "LOGOUT"
+  profile: "Profile"
+  settings: "Settings"
+
