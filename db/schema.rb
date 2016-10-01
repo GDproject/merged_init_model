@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160930150638) do
+ActiveRecord::Schema.define(version: 20160930161644) do
 
   create_table "bets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.float    "home_coin",  limit: 24
@@ -133,9 +133,11 @@ ActiveRecord::Schema.define(version: 20160930150638) do
     t.string   "user_name"
     t.string   "email"
     t.boolean  "isadmin"
-    t.float    "coin",       limit: 24
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.float    "coin",            limit: 24
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "password_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
   add_foreign_key "bets", "matches"
